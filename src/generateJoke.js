@@ -1,15 +1,17 @@
-import axios from 'axios'
 
-function generateJoke() {
-  const config = {
-    headers: {
-      Accept: 'application/json',
-    },
-  }
+const BASE_URL="https://747m2gle3f.execute-api.eu-north-1.amazonaws.com/proxy";
+async function getHelloWorld(name,city) {
+    const endpoint=`${BASE_URL}/samplegetapi_r?name=${name}&city=${city}`;
+   // const endpoint=`${BASE_URL}/helloworld?name=Rashmi&city=`;
+try{
+    const response = await fetch(endpoint);
+    let data = await response.json();
+        console.log(data.message);
+    }
 
-  axios.get('https://icanhazdadjoke.com', config).then((res) => {
-    document.getElementById('joke').innerHTML = res.data.joke
-  })
+catch(error){
+    console.log(error);
+    }   
 }
 
-export default generateJoke
+export default  getHelloWorld

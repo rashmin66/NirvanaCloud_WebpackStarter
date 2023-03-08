@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
+
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
@@ -11,7 +13,11 @@
       <img id="laughImg" alt="" />
       <h3>Don't Laugh Challenge</h3>
       <div id="joke" class="joke"></div>
-      <button id="jokeBtn" class="btn">Get Another Joke</button>
+      <button id="btn" class="btn">Get Another Joke</button>
     </div>
+
+    <!-- <button id="fetchBtn" onclick="CallApi()">Fetch Data</button> -->
+
+	
   </body>
 </html>
