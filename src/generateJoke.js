@@ -7,6 +7,7 @@ try{
     const response = await fetch(endpoint);
     let data = await response.json();
     document.getElementById('joke').innerHTML=data.message;
+    
         console.log(data.message);
     }
 
