@@ -1,7 +1,7 @@
 import generateJoke from './generateJoke'
 import './styles/main.scss'
 import laughing from './assets/laughing.svg'
-import getHelloWorld from './generateJoke'
+import getData from './generateJoke'
 
 const laughImg = document.getElementById('laughImg')
 //laughImg.src = laughing
@@ -11,5 +11,5 @@ const laughImg = document.getElementById('laughImg')
 
 
 const btn=document.getElementById('btn')
-btn.addEventListener('click',()=>{getHelloWorld('Rashmi','Kurunegala')});
+btn.addEventListener('click',()=>{getData('Rashmi','Kurunegala')});
 // generateJoke()
